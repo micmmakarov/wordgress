@@ -17,6 +17,7 @@ group :production do
   gem 'execjs'
   gem 'therubyracer'
   gem 'libv8', '3.3.10.4'
+  gem 'activerecord-postgresql-adapter'
 end
 
 
