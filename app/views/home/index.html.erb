@@ -1,0 +1,48 @@
+
+<form class=nice>
+<input type=edit class="word input-text">
+<a href="#" class="word-submit nice blue big button radius">SUbmit word</a>
+</form>
+
+
+
+<div class=remember>
+
+</div>
+
+<script>
+
+    function jcall(data1) {
+//alert("!!!"+JSON.stringify(data1));
+        var i;
+        $.ajax({url:'/word', data:{data: data1}, type: "POST"
+        });
+        var l = data1.primaries[0].entries.length;
+        for (i = 0; i<l; i++) {
+            $("body").append("<br>DEF: "+data1.primaries[0].entries[i].terms[0].text);
+            if (typeof data1.primaries[0].entries[i] != 'undefined')
+                if (typeof data1.primaries[0].entries[i].entries != 'undefined')
+                    if (typeof data1.primaries[0].entries[i].entries[0].terms[0] != 'undefined')
+                        $("body").append("<br>EXAMPLE: "+data1.primaries[0].entries[i].entries[0].terms[0].text);
+        }
+
+    }
+
+$(document).ready( function () {
+
+$(".word-submit").click(function (e) {
+e.preventDefault();
+a=$(".word").val();
+$.ajax({
+url: "http://www.google.com/dictionary/json",
+dataType:'JSONP',
+data: {q: a, sl: 'en', tl:'en',client: 'te', restrict:'pr%2Cde',client:'te' },
+jsonpCallback: "jcall"
+});
+
+
+
+});
+});
+
+</script>

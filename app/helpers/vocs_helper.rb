@@ -1,0 +1,2 @@
+module VocsHelper
+end
