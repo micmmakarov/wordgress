@@ -22,8 +22,12 @@
 }
 
 .word-submit {
-display:inline-block;
-margin-left: 20px
+margin-left: 20px;
+float:left;
+}
+.word {
+float: left;
+margin-right:10px;
 }
 
 .forget {

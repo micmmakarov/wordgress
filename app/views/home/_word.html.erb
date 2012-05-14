@@ -1,0 +1,12 @@
+<h2><%= word.text %></h2>
+<ul>
+<% word.definitions.each do |d| %>
+    <li>
+        <strong><%= d.text %></strong>
+    </li>
+    <li>
+        <%= d.examples[0].text %>
+    </li>
+    
+<% end %>
+</ul>

@@ -5,6 +5,8 @@
   <%= @word.word %>
 </p>
 
+<%= render :partial => 'home/word', :locals => {:word => @word} %>
+
 
 <%= link_to 'Edit', edit_word_path(@word) %> |
 <%= link_to 'Back', words_path %>

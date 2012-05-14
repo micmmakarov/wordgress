@@ -1,12 +1,14 @@
-
-<form class=nice>
-<input type=edit class="word input-text">
-<a href="#" class="word-submit nice blue big button radius">SUbmit word</a>
-</form>
-
-
+<div class="row">
+    <form class=nice>
+        <input type=edit class="word input-text">
+        <a href="#" class="word-submit nice blue button radius">Find word</a>
+    </form>
+</div>
 
 <div class=remember>
+</div>
+
+<div class=data>
 
 </div>
 
@@ -17,13 +19,14 @@
         var i;
         $.ajax({url:'/word', data:{data: data1}, type: "POST"
         });
+        $(".data").html(" ");
         var l = data1.primaries[0].entries.length;
         for (i = 0; i<l; i++) {
-            $("body").append("<br>DEF: "+data1.primaries[0].entries[i].terms[0].text);
+            $(".data").append("<br>DEF: "+data1.primaries[0].entries[i].terms[0].text);
             if (typeof data1.primaries[0].entries[i] != 'undefined')
                 if (typeof data1.primaries[0].entries[i].entries != 'undefined')
                     if (typeof data1.primaries[0].entries[i].entries[0].terms[0] != 'undefined')
-                        $("body").append("<br>EXAMPLE: "+data1.primaries[0].entries[i].entries[0].terms[0].text);
+                        $(".data").append("<br>EXAMPLE: "+data1.primaries[0].entries[i].entries[0].terms[0].text);
         }
 
     }

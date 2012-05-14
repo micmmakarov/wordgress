@@ -2,7 +2,7 @@
     <h5>Words you have remembered:</h5>
     <ul>
         <% current_user.words.each do |w| %>
-            <li><%= w.text %><%= render :partial => 'home/forget', :locals => {:word => w} %><div class=clear></div></li>
+            <li><%= link_to w.text, w %><%= render :partial => 'home/forget', :locals => {:word => w} %><div class=clear></div></li>
 
         <% end %>
     </ul>
