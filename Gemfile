@@ -6,18 +6,19 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
 gem "zurb-foundation"
 gem 'devise'
 gem 'heroku'
-gem "will_paginate"
+#gem "will_paginate"
 gem "omniauth-facebook"
 group :production do
   gem 'pg'
   gem 'execjs'
   gem 'therubyracer'
-  gem 'libv8', '3.3.10.4'
-  gem 'activerecord-postgresql-adapter'
+  #gem 'libv8', '3.3.10.4'
 end
 
 
