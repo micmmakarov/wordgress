@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86edbabc-fa1f-4fff-88a1-247e67b71723" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ratings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/ratings_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/definition.rb" afterPath="$PROJECT_DIR$/app/models/definition.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_remember.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_remember.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_word.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_word.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/remember.js.erb" afterPath="$PROJECT_DIR$/app/views/home/remember.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ratings/_rating.html.erb" afterPath="$PROJECT_DIR$/app/views/ratings/_rating.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/words/show.html.erb" afterPath="$PROJECT_DIR$/app/views/words/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="WG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_word.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_word.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_word.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="24" selection-start="653" selection-end="653" vertical-scroll-proportion="-4.714286">
+            <state line="19" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.35740072">
               <folding />
             </state>
           </provider>
@@ -89,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="definition.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="definition.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/definition.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="42" selection-start="80" selection-end="80" vertical-scroll-proportion="0.054187194">
+            <state line="1" column="42" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,11 +138,11 @@
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/ratings/_rating.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/_word.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20120519073301_add_rating_to_definition.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/rating.rb" />
         <option value="$PROJECT_DIR$/app/models/definition.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/_word.html.erb" />
       </list>
     </option>
   </component>
@@ -834,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ratings/_rating.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="351" selection-end="351" vertical-scroll-proportion="-0.31132075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="53" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
@@ -851,13 +833,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="44" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_word.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="653" selection-end="653" vertical-scroll-proportion="-4.714286">
           <folding />
         </state>
       </provider>
@@ -885,7 +860,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/definition.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="42" selection-start="80" selection-end="80" vertical-scroll-proportion="0.054187194">
+        <state line="1" column="42" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ratings/_rating.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="351" selection-end="351" vertical-scroll-proportion="-0.31132075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_word.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="0.35740072">
           <folding />
         </state>
       </provider>
