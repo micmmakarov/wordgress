@@ -21,14 +21,16 @@ body {
 .logo {
     margin-top:25px;
     display: block;
-    color:#666;
-    text-shadow: 3px 3px 3px #CCCCCC;
+    color:#FFFFFF;
+    text-shadow: 1px 1px 0px #2A85E8;
     font-size: 37px;
 }
 
 .login li {
     float: left;
-    margin: 30px 10px;
+
+    margin-right: 10px;
+    margin-bottom:0px;
 }
 .login {
     float:right;
@@ -43,14 +45,7 @@ float: left;
 margin-right:10px;
 }
 
-.forget {
-color:red;
-float:right;
-background: none;
-border:none;
-cursor:pointer;
-border-bottom: 1px dashed red;
-}
+
 .clear {
 clear: both;
 }
@@ -112,4 +107,60 @@ background: url(/assets/arrows.png) no-repeat;
 }
 .word-section {
     width:100%;
+}
+.header {
+    background:black;
+    border-bottom:2px solid red;
+    margin-bottom:30px;
+}
+.word-link {
+    height:15px;
+    overflow:hidden;
+}
+.forget-word {
+    max-width:50%;
+    overflow:hidden;
+    float:right;
+    margin-bottom:0px;
+
+}
+
+.forget {
+    color:red;
+
+    background: none;
+    border:none;
+    cursor:pointer;
+    border-bottom: 1px dashed red;
+}
+
+.remembered-words {
+}
+.remembered-words li {
+    margin:0px;
+}
+
+.example {
+    color:#AAAAAA;
+}
+
+.my-words .left {
+    width:10%; float:left;   max-width:30px;
+
+}
+.my-words .right {
+    margin-left:5%;
+    width:85%; float:left;
+}
+.clear {
+    clear:both;
+}
+
+.menu li {
+    float:left;
+    margin-right:15px;
+    margin-top: 30px;
+}
+.menu li li {
+    margin-top:0px;
 }

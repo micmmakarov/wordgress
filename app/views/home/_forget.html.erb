@@ -1,6 +1,6 @@
 
       <%= form_for(word, :url => { :action => "toggle", :id => word.id, :controller => "vocs" },
-                   html: { method: :post }, class: 'follow',
+                   html: { method: :post, :class => 'forget-word' },
                    remote: true) do |f| %>
           <%= f.submit "forget", class: "forget" %>
       <% end %>

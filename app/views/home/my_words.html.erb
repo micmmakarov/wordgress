@@ -1,0 +1,21 @@
+<ul class=my-words>
+  <% current_user.words.each do |w| %>
+      <li>
+        <div class=left>
+          <%= render :partial => "ratings/rating", :locals => {:obj => w} %>
+        </div>
+        <div class=right>
+          <h4><%= link_to w.text, w %></h4>
+          <% if w.definitions.present? %>
+              <% d = w.definitions.first(:order => 'rating DESC') %>
+              <div><%= d.text %></div>
+              <% if d.examples.present? %>
+                  <div class=example><%= d.examples.first.text.to_s.html_safe %></div>
+              <% end %>
+          <% end %>
+        </div>
+        <div class=clear>
+        </div>
+      </li>
+  <% end %>
+</ul>

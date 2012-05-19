@@ -7,7 +7,7 @@
 
             <% d.examples.each do |e| %>
 
-                <div><%= e.text %></div>
+                <div><%= e.text.to_s.html_safe %></div>
 
             <% end %>
 

@@ -1,8 +1,9 @@
 <% if user_signed_in? %>
     <h5>Words you have remembered:</h5>
-    <ul>
+    <hr />
+    <ul class=remembered-words>
         <% current_user.words.each do |w| %>
-            <li><%= link_to w.text, w %><%= render :partial => 'home/forget', :locals => {:word => w} %><div class=clear></div></li>
+            <li><%= link_to w.text, w, :class => 'word-link' %><%= render :partial => 'home/forget', :locals => {:word => w} %><div class=clear></div></li>
 
         <% end %>
     </ul>

@@ -55,6 +55,13 @@ class ApiController < ApplicationController
         puts "###"
         def1 = e[1][:terms]['0'][:text]#.class #['0'][:terms]['0'][:text]
         puts "Definition " + e[0].to_s + " : " + def1.to_s
+        puts "%%%"
+        puts "%%%"
+        puts "%%%"
+        puts def1.to_s.downcase + " and " + (w.to_s+"s").downcase
+        if def1.to_s.downcase==(w.to_s+"s").downcase then
+
+        else
         def2 = @word.definitions.create!(:text => def1, :rating => 0)
                                      #data1.primaries[0].entries[i].terms[0].text
         if e[1][:entries]
@@ -62,7 +69,7 @@ class ApiController < ApplicationController
         end
         puts "Example " + e[0].to_s + " : " + def1.to_s
         def2.examples.create!(:text => example1)
-
+        end
       end
     else
       @word=words[0]

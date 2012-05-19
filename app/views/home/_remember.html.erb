@@ -12,7 +12,7 @@
                    html: { method: :post }, class: 'follow',
                    remote: true) do |f| %>
 
-          <%= f.submit "Remember " + word.text, class: "green small radius button" %>
+          <%= f.submit "Remember '" + word.text+"'", class: "green small radius button" %>
       <% end %>
 
 <% end %>

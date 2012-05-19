@@ -12,6 +12,7 @@ Wg::Application.routes.draw do
   resources :users
 
   get "home/index"
+  get "my-words" => "home#my_words"
 
   match "word" => "api#word" #Pass word data
   match "toggle/:id" => "vocs#toggle" #Remember/forget
