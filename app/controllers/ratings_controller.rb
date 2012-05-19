@@ -91,7 +91,7 @@ class RatingsController < ApplicationController
     puts "###"
     puts "Class: " + o.id.to_s
     puts "Value: " + value
-    current_user.rate!(o, 1)
+    current_user.rate!(o, value.to_i)
     #current_user.rate!(obj, value)
     respond_to do |format|
       format.js { render :partial => "ratings/vote.js", :locals => {:obj => o} }

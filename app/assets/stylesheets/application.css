@@ -57,4 +57,40 @@ background: url(/assets/arrows.png) no-repeat;
     height:14px;
     cursor:pointer;
 }
+.up-inactive {
+    background: url(/assets/arrows.png) no-repeat -32px 1px;
+    width:14px;
+    height:14px;
+
+}
+.down-inactive {
+    background: url(/assets/arrows.png) no-repeat;
+    width:14px;
+    height:14px;
+
+}
+.up-done {
+    background: url(/assets/arrows.png) no-repeat -48px 1px;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+.down-done {
+    background: url(/assets/arrows.png) no-repeat -16px 1px;;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+
+.hits {
+    font-size: 8px;
+}
+.rating {
+    padding-bottom:0px;
+    padding-top:2px;
+}
+.rating-block div {
+    margin:auto;
+    text-align:center;
+}
 

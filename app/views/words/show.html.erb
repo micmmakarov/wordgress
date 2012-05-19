@@ -4,21 +4,11 @@
   <b>Word:</b>
   <%= @word.word %>
 
-  <%= render :partial => "ratings/rating", :locals => {:obj => @word} %>
 </p>
 
 
 <%= render :partial => 'home/word', :locals => {:word => @word} %>
-<% if current_user.rated?(@word) %>
-    :<%= current_user.rated?(@word) %>
-<% end %>
 
-<% current_user.ratings.each do |r| %>
-    ID:<%= r.id %>,
-    user:<%= r.user_id %>,
-    word:<%= r.word_id %>,
-    ID:<%= r.id %>,   <br>
-<% end %>
 
 <%= link_to 'Edit', edit_word_path(@word) %> |
 <%= link_to 'Back', words_path %>

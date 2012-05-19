@@ -1,2 +1,2 @@
-$(".remember").html("<%= escape_javascript(render('home/remember')) %>");
+$(".remember").html("<%= escape_javascript(render :partial => 'home/remember', :locals => {:word => @word}) %>");
 $(".sidebar").html("<%= escape_javascript(render('home/sidebar')) %>");

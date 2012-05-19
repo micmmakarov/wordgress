@@ -33,8 +33,9 @@ class User < ActiveRecord::Base
   end
 
   def rated?(ddd)
-    if self.ratings.where("#{ddd.class.to_s.downcase}_id" => ddd.id).present?
-      "Ha"
+    a=self.ratings.where("#{ddd.class.to_s.downcase}_id" => ddd.id)
+    if a.present?
+      a[0].value
     end
   end
 
@@ -44,6 +45,12 @@ class User < ActiveRecord::Base
       else
         value=1
       end
+
       self.ratings.create!("#{ddd.class.to_s.downcase}_id" => ddd.id, :value => value) if not rated?(ddd)
+
+      if ddd.class.to_s.downcase=="definition"
+        ddd.rating = ddd.rating.to_i + value
+        ddd.save!
+      end
   end
 end

@@ -1,11 +1,35 @@
-<h2><%= word.text %></h2>
+<div class=panel>
+  <div class=row>
+    <div class="nine columns">
+      <h2 style="float:left;"><%= word.text %></h2><div style="float:left;margin-left:30px;"><%= render :partial => "ratings/rating", :locals => {:obj => word} %></div>
+      <div style="clear:both;">
+      </div>
+    </div>
+    <div class="three columns">
+      <%= render :partial => "home/remember", :locals => {:word => word} %>
+    </div>
+
+  </div>
+</div>
+
 <ul>
-<% word.definitions.each do |d| %>
-    <li>
-        <strong><%= d.text %></strong>
-    </li>
-    <li>
-        <%= d.examples[0].text %>
+<% word.definitions.find(:all, :order => 'rating DESC').each do |d| %>
+    <li style="background:<%= cycle("white", "#EEEEEE") -%>;">
+        <div class=row>
+          <div class="nine columns">
+            <%= d.rating %><strong><%= d.text %></strong>
+            
+            <% d.examples.each do |e| %>
+                
+                <div><%= e.text %></div>
+            
+            <% end %>
+            
+          </div>
+          <div class="three columns">
+        <%= render :partial => "ratings/rating", :locals => {:obj => d} %>
+          </div>
+        </div>
     </li>
     
 <% end %>

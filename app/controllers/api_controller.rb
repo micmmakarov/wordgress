@@ -55,7 +55,7 @@ class ApiController < ApplicationController
         puts "###"
         def1 = e[1][:terms]['0'][:text]#.class #['0'][:terms]['0'][:text]
         puts "Definition " + e[0].to_s + " : " + def1.to_s
-        def2 = @word.definitions.create!(:text => def1)
+        def2 = @word.definitions.create!(:text => def1, :rating => 0)
                                      #data1.primaries[0].entries[i].terms[0].text
         if e[1][:entries]
           example1 = e[1][:entries]['0'][:terms]['0'][:text]

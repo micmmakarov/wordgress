@@ -1,21 +1,18 @@
 <div class = "remember">
-So:
 
-  <% if current_user.remember?(@word) %>
-      So first option:
-      <%= form_for(@word, :url => { :action => "toggle", :id => @word.id, :controller => "vocs" },
+  <% if current_user.remember?(word) %>
+      <%= form_for(word, :url => { :action => "toggle", :id => word.id, :controller => "vocs" },
                    html: { method: :post }, class: 'follow',
                    remote: true) do |f| %>
           <%= f.submit "Forget", class: "red small radius button" %>
       <% end %>
 
   <% else %>
-      So second option:
-      <%= form_for(@word, :url => "/toggle/"+@word.id.to_s,
+      <%= form_for(word, :url => "/toggle/"+word.id.to_s,
                    html: { method: :post }, class: 'follow',
                    remote: true) do |f| %>
 
-          <%= f.submit "Remember " + @word.text, class: "green small radius button" %>
+          <%= f.submit "Remember " + word.text, class: "green small radius button" %>
       <% end %>
 
 <% end %>
