@@ -13,8 +13,10 @@ Wg::Application.routes.draw do
 
   get "home/index"
 
-  match "word" => "api#word"
-  match "toggle/:id" => "vocs#toggle"
+  match "word" => "api#word" #Pass word data
+  match "toggle/:id" => "vocs#toggle" #Remember/forget
+  match "vote" => "ratings#vote"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

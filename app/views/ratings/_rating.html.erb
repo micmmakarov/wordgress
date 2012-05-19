@@ -1,0 +1,11 @@
+<div class="Object_<%= obj.class.to_s %>_<%= obj.id %>" data-id="<%= obj.id %>" data-class="<%= obj.class.to_s %>">
+    <div class="vote up">
+    </div>
+    <div>
+      <%=  obj.ratings.sum(:value) %>,
+      <%=  obj.ratings.length %>
+    </div>
+    <div class="vote down">
+    </div>
+</div>
+

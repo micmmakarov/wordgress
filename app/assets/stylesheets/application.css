@@ -41,3 +41,20 @@ border-bottom: 1px dashed red;
 .clear {
 clear: both;
 }
+
+
+
+/* Rating */
+.up {
+background: url(/assets/arrows.png) no-repeat -32px 1px;
+width:14px;
+height:14px;
+cursor:pointer;
+}
+.down {
+background: url(/assets/arrows.png) no-repeat;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+

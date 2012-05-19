@@ -27,5 +27,34 @@
 <%= controller.action_name %>-->
 </div>
 
+
+<script>
+    $(document).ready(function() {
+       $("input[type=submit]").click(function () {
+           $(this).parent().css({"width":"20px","height":"20px","background-image":"url(/assets/load.gif)"});
+       });
+    });
+</script>
+
+
+<script>
+  $(document).ready(function () {
+      $(".vote").click(function () {
+            var v1 = 0;
+            if ($(this).hasClass("up")) {
+               v1 = 1
+            }
+            if ($(this).hasClass("down")) {
+              v1 = -1
+            }
+            id = $(this).parent().attr("data-id");
+            cls = $(this).parent().attr("data-class");
+
+            $.ajax({url:"/vote", data: {obj: cls, id: id, value:v1}});
+      });
+  });
+
+</script>
+
 </body>
 </html>

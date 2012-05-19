@@ -80,4 +80,24 @@ class RatingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def vote
+    obj = params[:obj]
+    id = params[:id]
+    value = params[:value]
+    o = obj.constantize.find(id)
+    puts "###"
+    puts "###"
+    puts "###"
+    puts "Class: " + o.id.to_s
+    puts "Value: " + value
+    current_user.rate!(o, 1)
+    #current_user.rate!(obj, value)
+    respond_to do |format|
+      format.js { render :partial => "ratings/vote.js", :locals => {:obj => o} }
+      format.html { redirect_to "home#index" }
+    end
+  end
+
+
 end

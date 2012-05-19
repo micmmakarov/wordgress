@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :vocs
   has_many :words, :through => :vocs
-
+  has_many :ratings
 
   def remember?(word)
     v = self.vocs.find_by_word_id(word.id)
@@ -32,4 +32,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  def rated?(ddd)
+    if self.ratings.where("#{ddd.class.to_s.downcase}_id" => ddd.id).present?
+      "Ha"
+    end
+  end
+
+  def rate!(ddd, value)
+      if value < 0
+        value=-1
+      else
+        value=1
+      end
+      self.ratings.create!("#{ddd.class.to_s.downcase}_id" => ddd.id, :value => value) if not rated?(ddd)
+  end
 end

@@ -3,6 +3,6 @@ class Definition < ActiveRecord::Base
 
   belongs_to :word
   has_many :examples
-
+  has_many :ratings
 
 end
