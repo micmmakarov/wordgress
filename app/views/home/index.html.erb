@@ -7,11 +7,12 @@
     </form>
 </div>
 
-<div class=remember>
-</div>
+<!--<div class=remember>
+</div>-->
+<div class=word-section>
+<ul class=definitions>
 
-<div class=data>
-
+</ul>
 </div>
 
 <script>
@@ -21,17 +22,25 @@
         var i;
         $.ajax({url:'/word', data:{data: data1}, type: "POST"
         });
-        $(".data").html(" ");
+        $(".definitions").html(" ");
         var l = data1.primaries[0].entries.length;
+
         for (i = 0; i<l; i++) {
-            $(".data").append("<br>DEF: "+data1.primaries[0].entries[i].terms[0].text);
+            $(".definitions").append('<li style="background:rgba(255,255,255,0.5);margin:0px;padding:7px;"><div class=row><div class="nine columns phone-three"><strong>'+data1.primaries[0].entries[i].terms[0].text +'</strong>');
             if (typeof data1.primaries[0].entries[i] != 'undefined')
                 if (typeof data1.primaries[0].entries[i].entries != 'undefined')
                     if (typeof data1.primaries[0].entries[i].entries[0].terms[0] != 'undefined')
-                        $(".data").append("<br>EXAMPLE: "+data1.primaries[0].entries[i].entries[0].terms[0].text);
+                        $(".definitions").append("<div>"+data1.primaries[0].entries[i].entries[0].terms[0].text+'</div>');
+            $(".definitions").append('</div><div class="three columns phone-one"></div></div></li>');
         }
 
+        $(".definitions li:odd").css("background", "rgba(0,0,0,0.1)");
     }
+
+
+
+
+
 
 $(document).ready( function () {
 

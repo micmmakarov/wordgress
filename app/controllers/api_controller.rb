@@ -22,7 +22,7 @@ class ApiController < ApplicationController
     puts "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
     @word = Word.find(@word.id)
-    render "home/remember.js"
+    render "home/search.js"
 
     #data1.primaries[0].entries
 

@@ -13,6 +13,19 @@
  *= require_tree .
 */
 
+body {
+    background: url(/assets/bg.jpg) !important;
+    font-shadow: 0px 1px 0px white !important;
+}
+
+.logo {
+    margin-top:25px;
+    display: block;
+    color:#666;
+    text-shadow: 3px 3px 3px #CCCCCC;
+    font-size: 37px;
+}
+
 .login li {
     float: left;
     margin: 30px 10px;
@@ -94,3 +107,9 @@ background: url(/assets/arrows.png) no-repeat;
     text-align:center;
 }
 
+.definitions li {
+    min-height: 60px;
+}
+.word-section {
+    width:100%;
+}

@@ -1,0 +1,22 @@
+<ul class=definitions>
+  <% word.definitions.find(:all, :order => 'rating DESC').each do |d| %>
+      <li style="background:<%= cycle("rgba(255,255,255,0.5)", "rgba(0,0,0,0.1)") -%>;margin:0px;padding:7px;">
+        <div class=row>
+          <div class="nine columns phone-three">
+            <strong><%= d.text %></strong>
+
+            <% d.examples.each do |e| %>
+
+                <div><%= e.text %></div>
+
+            <% end %>
+
+          </div>
+          <div class="three columns phone-one">
+            <%= render :partial => "ratings/rating", :locals => {:obj => d} %>
+          </div>
+        </div>
+      </li>
+
+  <% end %>
+</ul>

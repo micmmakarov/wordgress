@@ -39,7 +39,7 @@
 
 <script>
   $(document).ready(function () {
-      $(".vote").click(function () {
+      $(".vote").live('click',function () {
             var v1 = 0;
             if ($(this).hasClass("up")) {
                v1 = 1
